@@ -6,6 +6,7 @@ dotenv.config();
 // connectDB();
 
 const app = express();
+const PORT = process.env.PORT || 5000
 
 // Body parser
 app.use(express.json());
@@ -18,5 +19,5 @@ app.get('/', (req, res, next) => {
 })
 
 app.listen(PORT, () => {
-    console.log('server running!')
+    console.log(`server running on ${PORT}` )
 })
